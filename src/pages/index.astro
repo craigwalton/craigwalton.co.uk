@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Craig Walton – Software Engineer"
+  description="Craig Walton, independent software engineer in Aberdeen, Scotland, taking on contract work remotely and on-site."
+>
+  <h1>Craig Walton</h1>
+  <p class="lede">Independent software engineer in Aberdeen, Scotland.</p>
+  <p>
+    I take on contract software engineering work, remotely or on-site, from applications and backend
+    systems to developer tooling and infrastructure.
+  </p>
+
+  <h2>Projects</h2>
+  <ul class="projects">
+    <li>
+      <h3>Inspect</h3>
+      <p>
+        The UK AI Security Institute's open-source framework for large language model evaluations.
+        Contributed to the <a href="https://inspect.aisi.org.uk/">core framework</a> and to
+        <a href="https://github.com/UKGovernmentBEIS/inspect_k8s_sandbox">Inspect K8s Sandbox</a>,
+        which runs evaluation sandboxes on Kubernetes.
+      </p>
+    </li>
+    <li>
+      <h3>Strategy software</h3>
+      <p>Red Bull Racing Formula 1 team. TODO</p>
+    </li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>If you have a project you'd like to discuss, I'd be glad to hear from you.</p>
+  <dl class="contact">
+    <div>
+      <dt>Email</dt>
+      <dd>
+        <a id="email-link"></a>
+        <noscript>craig.w [at] me.com</noscript>
+      </dd>
+    </div>
+    <div>
+      <dt>GitHub</dt>
+      <dd>
+        <a href="https://github.com/craigwalton">github.com/craigwalton</a>
+      </dd>
+    </div>
+    <div>
+      <dt>LinkedIn</dt>
+      <dd>
+        <a href="https://www.linkedin.com/in/craigwalton1">linkedin.com/in/craigwalton1</a>
+      </dd>
+    </div>
+  </dl>
+
+  <script>
+    const link = document.getElementById("email-link") as HTMLAnchorElement;
+    const address = ["craig.w", "me.com"].join("@");
+    link.href = `mailto:${address}`;
+    link.textContent = address;
+  </script>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 3rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .projects {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .projects h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .projects p {
+    margin: 0;
+  }
+
+  .contact {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact > div {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .contact dt {
+    color: var(--text-muted);
+  }
+
+  .contact dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+</style>
