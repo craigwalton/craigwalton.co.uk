@@ -16,17 +16,52 @@ import Layout from "../layouts/Layout.astro";
   <h2>Projects</h2>
   <ul class="projects">
     <li>
-      <h3>Inspect</h3>
+      <h3>
+        <a href="https://inspect.aisi.org.uk/">Inspect AI</a>
+      </h3>
       <p>
-        The UK AI Security Institute's open-source framework for large language model evaluations.
-        Contributed to the <a href="https://inspect.aisi.org.uk/">core framework</a> and to
-        <a href="https://github.com/UKGovernmentBEIS/inspect_k8s_sandbox">Inspect K8s Sandbox</a>,
-        which runs evaluation sandboxes on Kubernetes.
+        Contributed to UK AI Security Institute's open-source Python framework for large language
+        model evaluations. Developed its sandboxed compute environments on Docker and Kubernetes,
+        including <a href="https://k8s-sandbox.aisi.org.uk/">Inspect K8s Sandbox</a>.
       </p>
     </li>
     <li>
-      <h3>Strategy software</h3>
-      <p>Red Bull Racing Formula 1 team. TODO</p>
+      <h3>
+        <a href="https://meridianlabs-ai.github.io/inspect_flow/">Inspect Flow</a> and
+        <a href="https://meridianlabs-ai.github.io/inspect_scout/">Inspect Scout</a>
+      </h3>
+      <p>
+        Python evaluation infrastructure built on Inspect AI, for
+        <a href="https://www.meridianlabs.ai/">Meridian Labs</a>. Contributed public APIs and
+        portable spec serialisation to Inspect Flow, which runs evaluations at scale, and transcript
+        import and storage to Inspect Scout, which analyses AI agent transcripts.
+      </p>
+    </li>
+    <li>
+      <h3>Evaluation platform, UK AI Security Institute</h3>
+      <p>
+        AWS infrastructure for evaluating pre-release frontier models to tight timescales: staff
+        compute, Kubernetes clusters, public-facing research studies and ETL pipelines.
+      </p>
+    </li>
+    <li>
+      <h3>Race strategy software, Red Bull Racing</h3>
+      <p>
+        Real-time strategy and car-performance analysis tools used on the pit wall, in the garage
+        and at the factory, fed by live timing, GPS, weather and race-control data over Kafka.
+        C#/.NET desktop front-ends with C# and Python services on Kubernetes.
+      </p>
+    </li>
+    <li>
+      <h3>Personal projects</h3>
+      <p>
+        <a href="https://craigwalton.github.io/PropertyExplorer/">Property Explorer</a>, a
+        photorealistic 3D map of properties for sale built in React with Python data pipelines;
+        <a href="https://craigwalton.github.io/MortgageSim/">Mortgage Sim</a>, a buy-versus-rent
+        simulator in C#; and
+        <a href="https://craigwalton.github.io/ClimateExplorer/">Climate Explorer</a>, an
+        interactive React infographic of Earth's climate system.
+      </p>
     </li>
   </ul>
 
@@ -100,6 +135,14 @@ import Layout from "../layouts/Layout.astro";
 
   .projects p {
     margin: 0;
+  }
+
+  .projects h3 a {
+    text-decoration: none;
+  }
+
+  .projects h3 a:hover {
+    text-decoration: underline;
   }
 
   .contact {
