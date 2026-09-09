@@ -1,0 +1,24 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# JetBrains: share only settings that mirror the VS Code workflow
+.idea/*
+!.idea/prettier.xml
+!.idea/eslint.xml
+!.idea/runConfigurations/
